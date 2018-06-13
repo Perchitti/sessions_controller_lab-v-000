@@ -13,7 +13,7 @@ end
 end
 
 def destroy
-  session.delete :name
+  session.delete :name if session[:name]
 end
 
 
