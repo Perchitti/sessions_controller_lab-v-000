@@ -1,20 +1,21 @@
 class SessionsController < ApplicationController
 
-def new
-end
 
-def create
-  if session[:name] = params[:name]
-  redirect_to '/'
-else
-  params[:name].nil? || params[:name] == ""
-  redirect_to login_path
-end
-end
+  def new
+  end
 
-def destroy
-  session.delete :name if session[:name]
-end
+  def create
+    if params[:name].nil? || params[:name] == ""
+      redirect_to login_path
+    else
+      session[:name] = params[:name]
+      redirect_to root_path
+    end
+  end
 
+  def destroy
+    session.delete :name if session[:name]
+    redirect_to controller: 'application', action: 'hello'
+  end
 
 end
