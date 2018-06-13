@@ -9,6 +9,7 @@ def create
   if session[:name] = nil || session[:name] = ""
     redirect to '/'
 end
+end
 
 def destroy
   session.delete :name
