@@ -4,8 +4,10 @@ def new
 end
 
 def create
-  session[:name] = nil || session[:name] = ""
+  session[:name] = params[:name]
   redirect_to '/'
+  if session[:name] = nil || session[:name] = ""
+    redirect to '/'
 end
 
 def destroy
