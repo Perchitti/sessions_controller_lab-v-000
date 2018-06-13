@@ -10,6 +10,7 @@ else
   params[:name].nil? || params[:name] ==""
   redirect_to login_path
 end
+end
 
 def destroy
   session.delete :name
