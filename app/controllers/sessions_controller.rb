@@ -4,7 +4,7 @@ def new
 end
 
 def create
-  session[:name] = params[:name] || session[:name] = ""
+  session[:name] = nil || session[:name] = ""
   redirect_to '/'
 end
 
