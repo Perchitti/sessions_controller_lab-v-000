@@ -7,7 +7,7 @@ def create
   if session[:name] = params[:name]
   redirect_to '/'
 else
-  params[:name].nil? || params[:name] ==""
+  params[:name].nil || params[:name] ==""
   redirect_to login_path
 end
 end
