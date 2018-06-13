@@ -5,7 +5,7 @@ end
 
 def create
   session[:name] = params[:name] || session[:name] = ""
-  redirect_to '/new'
+  redirect_to '/'
 end
 
 def destroy
