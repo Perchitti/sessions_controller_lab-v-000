@@ -1,9 +1,13 @@
 class SessionsController < ApplicationController
 
-def index
+def new
 end
 
-def show
+def create
 end
+
+def destroy
+end
+
 
 end
